@@ -2,13 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import Button from "../styles/Button";
 import {NavLink} from "react-router-dom";
-const HeroSection = () => {
+const HeroSection = (props) => {
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <p className="hero-top-data">THIS IS ME</p>
-          <h1 className="hero-heading">SAHIL PILLANIA</h1>
+          <h1 className="hero-heading">{props.name}</h1>
           <p className="hero-para">
             I'm Sahil pillania. I am full stack developer, freelancer. I can
             work on frontend and backend both.
@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="./images/gif.gif" alt="image" className="hero-img" />
+            <img src={props.image} alt="image" className="hero-img" />
           </picture>
         </div>
       </div>

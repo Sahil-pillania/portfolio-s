@@ -1,7 +1,13 @@
 import React from "react";
+import HeroSection from "./components/HeroSection"
 
 const About = () => {
-  return <div>About</div>;
+
+  const data = {
+      name: "SaHiL",
+      image: "./images/about.gif"
+  }
+  return <HeroSection {...data}/>;
 };
 
 export default About;
