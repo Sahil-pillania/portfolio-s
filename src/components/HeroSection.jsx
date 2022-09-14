@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import Button from "../styles/Button";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useGlobalContext } from "../context";
+
 const HeroSection = (props) => {
+  const fName = useGlobalContext();
+
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -10,7 +14,7 @@ const HeroSection = (props) => {
           <p className="hero-top-data">THIS IS ME</p>
           <h1 className="hero-heading">{props.name}</h1>
           <p className="hero-para">
-            I'm Sahil pillania. I am full stack developer, freelancer. I can
+            I'm {fName} pillania. I am full stack developer, freelancer. I can
             work on frontend and backend both.
           </p>
           <Button className="btn hireme-btn">
@@ -25,45 +29,43 @@ const HeroSection = (props) => {
       </div>
     </Wrapper>
   );
-}
+};
 
 const Wrapper = styled.section`
-
-.section-hero-data{
+  .section-hero-data {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-.btn{
+  }
+  .btn {
     max-width: 16rem;
-}
-.hero-top-data{
+  }
+  .hero-top-data {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.5rem;
-    color: ${({theme})=> theme.colors.helper}
-}
-.hero-heading{
+    color: ${({ theme }) => theme.colors.helper};
+  }
+  .hero-heading {
     text-transform: uppercase;
     font-size: 6.4rem;
-
-}
-.hero-para{
+  }
+  .hero-para {
     margin-top: 1.5rem;
     margin-bottom: 3.4rem;
     max-width: 60rem;
-}
-.section-hero-image{
+  }
+  .section-hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-picture{
+  }
+  picture {
     text-align: center;
-}
-.hero-img{
+  }
+  .hero-img {
     max-width: 80%;
-}
+  }
 `;
 
 export default HeroSection;
