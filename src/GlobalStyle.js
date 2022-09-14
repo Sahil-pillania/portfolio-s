@@ -56,6 +56,13 @@ li{
 .grid-three-column{
     grid-template-columns: repeat(3, 1fr);
 }
+  .common-heading {
+    font-size: 3.88rem;
+    font-weight: 600;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    margin-bottom: 6rem 0;
+  }
 
 `;
 export default GlobalStyle;
