@@ -56,6 +56,9 @@ li{
 .grid-three-column{
     grid-template-columns: repeat(3, 1fr);
 }
+.grid-four-column{
+    grid-template-columns: repeat(4, 1fr);
+}
   .common-heading {
     font-size: 3.88rem;
     font-weight: 600;
@@ -76,7 +79,7 @@ li{
   input[type="submit"]{
     cursor: pointer;
     transition: all 0.2s;
-    max-width: 12rem;
+    max-width: 14rem;
     margin-top: 2rem;
     background-color: ${({ theme }) => theme.colors.btn};
     color:${({ theme }) => theme.colors.white};
