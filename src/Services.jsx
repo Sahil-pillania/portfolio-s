@@ -101,5 +101,17 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (max-width: ${({ theme }) => theme.media.tab}) {
+    .grid.grid-three-column {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid.grid-two-column,
+    .grid.grid-three-column {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 export default Services;

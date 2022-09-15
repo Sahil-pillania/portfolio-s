@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 html{
    font-size: 62.5%;
-   /*scroll-behavior: smooth; */
+  scroll-behavior: smooth;
    overflow-x: hidden;
 }
 body{
@@ -106,6 +106,31 @@ li{
     text-transform: uppercase;
     font-size: 1.8rem;
     cursor: pointer;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.tab}){
+    .container{
+        padding: 0 3.2rem;
+    }
+    .grid.grid-three-column {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+@media (max-width: ${({ theme }) => theme.media.mobile}){
+    html{
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x:hidden;
+    }
+    
+    .grid-two-column, .grid-three-column, .grid-four-column
+    {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
   }
 
 

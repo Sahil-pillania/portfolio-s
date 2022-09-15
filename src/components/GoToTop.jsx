@@ -73,5 +73,11 @@ const Wrapper = styled.section`
       transform: translateY(0.6rem);
     }
   }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .top-btn {
+      left: 40%;
+      right: 0;
+    }
+  }
 `;
 export default GoToTop;

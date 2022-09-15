@@ -144,6 +144,26 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .contact-short {
+      max-width: 95vw;
+      padding: 2rem 2rem;
+
+      .grid-two-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .container {
+      footer .grid {
+        gap: 2rem;
+      }
+      input {
+        margin-right: 3rem;
+      }
+    }
+  }
 `;
 
 export default Footer;
