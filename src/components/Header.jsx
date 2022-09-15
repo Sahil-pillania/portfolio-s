@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
-import styled,{ThemeProvider} from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 const Header = () => {
   return (
@@ -26,6 +26,10 @@ const MainHeader = styled.header`
   span {
     font-size: 2.5rem;
     color: orange;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    padding: 0 0.8rem;
   }
 `;
 

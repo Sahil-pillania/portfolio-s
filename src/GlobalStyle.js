@@ -12,6 +12,9 @@ html{
    /*scroll-behavior: smooth; */
    overflow-x: hidden;
 }
+body{
+   overflow-x: hidden; 
+}
 ::-webkit-scrollbar{
     width: 1.2rem;
 
