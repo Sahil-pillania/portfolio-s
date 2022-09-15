@@ -6,6 +6,7 @@ import Services from "./Services";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import GoToTop from "./components/GoToTop";
 import Error from "./Error";
 import GlobalStyle from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <GoToTop />
         <Footer />
       </BrowserRouter>
     </ThemeProvider>
