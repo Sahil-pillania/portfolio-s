@@ -12,6 +12,20 @@ html{
    /*scroll-behavior: smooth; */
    overflow-x: hidden;
 }
+::-webkit-scrollbar{
+    width: 1.2rem;
+
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(24, 24, 29);
+}
+::-webkit-scrollbar-thumb{
+    background: #fff;
+    border: 5px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box; 
+}
+
 h1{
     color: ${({ theme }) => theme.colors.heading};
     font-size: 6rem;
@@ -90,6 +104,8 @@ li{
     font-size: 1.8rem;
     cursor: pointer;
   }
+
+
 
 `;
 export default GlobalStyle;
